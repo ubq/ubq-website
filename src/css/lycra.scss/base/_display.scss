@@ -1,0 +1,60 @@
+@if $use-base-display == true {
+
+	// --------------------------------------------------------------------------
+	// Display 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Display block
+	//
+
+	.displayBlock,
+	%displayBlock {
+		display: block;
+	}
+
+
+
+	//
+	// Display inline block
+	//
+
+	.displayInlineBlock,
+	%displayInlineBlock {
+		display: inline-block;
+	}
+
+
+
+	//
+	// Display inline
+	//
+
+	.displayInline,
+	%displayInline {
+		display: inline;
+	}
+
+
+
+	//
+	// Display table
+	//
+
+	.displayTable,
+	%displayTable {
+		display: table;
+	}
+
+
+
+	//
+	// Display table-cell
+	//
+
+	.displayTableCell,
+	%displayTableCell {
+		display: table-cell;
+	}
+
+}

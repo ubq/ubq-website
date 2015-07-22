@@ -1,0 +1,49 @@
+@if $use-base-type == true {
+
+	// --------------------------------------------------------------------------
+	// Type 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Type Weight Bold
+	//
+
+	.typeBold,
+	%typeBold {
+		font-weight: $FontWeight-bold;
+	}
+
+
+
+	//
+	// Type Weight Semi
+	//
+
+	.typeSemi,
+	%typeSemi {
+		font-weight: $FontWeight-semi;
+	}
+
+
+
+	//
+	// Type Weight Normal
+	//
+
+	.typeNormal,
+	%typeNormal {
+		font-weight: $FontWeight-normal;
+	}
+
+
+
+	//
+	// Type Style Italic
+	//
+
+	.typeItalic,
+	%typeItalic {
+		font-style: $FontStyle-italic;
+	}
+
+}

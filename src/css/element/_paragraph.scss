@@ -1,0 +1,15 @@
+p {
+	@include font-size($FontSize-b);
+	@include line-height($Lead);
+
+	margin-top: $Lead * 1.5;
+	margin-bottom: 0;
+
+	@include respond-to(480px) {
+		margin-top: $Lead * 2;
+	}
+
+	@include respond-to(520px) {
+		// margin-top: $Lead * 3;
+	}
+}

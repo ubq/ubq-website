@@ -1,0 +1,9 @@
+h2 {
+	font-family: $FontFamily-heading;
+	font-weight: 400;
+	@include font-size($FontSize-2);
+	@include line-height($Lead);
+
+	margin-top: 0;
+	margin-bottom: $Lead;
+}

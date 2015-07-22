@@ -1,0 +1,4 @@
+.vcard {
+	@include font-size($FontSize-6);
+	@include line-height($Lead);
+}

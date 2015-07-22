@@ -1,0 +1,222 @@
+// --------------------------------------------------------------------------
+// Grid VARIABLES 
+// --------------------------------------------------------------------------
+
+$Column-gutter: 20px !default;
+$Column-count: 12 !default;
+
+$Column-selector: column !default;
+$Column-prefix: column- !default;
+$Column-offsetSelector: column-offset- !default;
+
+$Row-selector: row !default;
+$Row-width: 100% !default;
+$Row-maxWidth: 1080px !default;
+$Row-margin: 0 auto !default;
+
+
+
+// --------------------------------------------------------------------------
+// Grid FUNCTIONS 
+// --------------------------------------------------------------------------
+
+//
+// Column width
+// Calculates the column width using the desired span and the total number of columns
+// For async grids it calulates the desired
+//
+
+@function columnWidth($Columns, $Column-span) {
+	@return percentage($Columns / $Column-span);
+}
+
+
+
+
+// --------------------------------------------------------------------------
+// Grid MIXINS
+// --------------------------------------------------------------------------
+// TODO: Tidy up the offset and column generators as can probably be refactored.?!?!?!??!
+
+//
+// Generate columns
+// Generates symmetric and asymetric grids using the $columns varible
+// The Propert aug allows the generator to be used to create columns and column offsets
+//
+
+@mixin columnGenerator($Columns: $Column-count, $Prefix: $Column-prefix, $Property: 'width') {
+
+	$Columm-total: $Columns;
+
+	// if async grid set total columns total number of them
+	@if length($Columns) > 1 {
+		$Columm-total: length($Columns);
+	} @else {
+		
+	}
+		
+	@for $i from 1 through $Columm-total {
+		.#{$Prefix + $i} {
+			@if length($Columns) > 1 {
+				// if there are multiple values in the Columns variable generate an asymmetrical grid
+				$Ratio: nth($Columns, $i);
+				#{$Property}: columnWidth($Ratio, 1);
+			}
+			@else {
+				//else there is one whole number stating the total Columns in a symmetrical grid
+				#{$Property}: columnWidth($i, $Columns);
+			}
+		}
+	}
+
+}
+
+@mixin generateColumns($Columns: $Column-count, $Prefix: $Column-prefix) {
+
+	@include columnGenerator($Columns, $Prefix, 'width');
+
+}
+
+
+
+//
+// Generate columns offsets
+// Generates symmetric and asymetric grid offsets using the $columns varible
+//
+
+@mixin generateOffsets($Columns: $Column-count, $Prefix: $Column-offsetSelector) {
+
+	@include columnGenerator($Columns, $Prefix, 'margin-left');
+
+}
+
+
+
+
+
+
+
+//
+// Grid column mixin
+// Used to seperate column positioning and dimmensions
+//
+
+@mixin column() {
+	float: left;
+	padding-left: $Column-gutter;
+	padding-right: $Column-gutter;
+	box-sizing: border-box;
+}
+
+
+
+//
+// Grid row mixin
+// Used to wrap the columns
+//
+
+@mixin row($Gutter-outer: true, $Gutter: $Column-gutter, $MaxWidth: true, $Margin: $Row-margin) {
+	
+	@if $MaxWidth == true {
+		max-width: $Row-maxWidth;
+	}
+
+	@if $Gutter-outer == true {
+		padding: 0 $Gutter;
+	}
+	
+	// width: $Row-width;
+	margin: $Margin;
+	box-sizing: border-box;
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+
+//
+// Grid row nested mixin
+//
+
+@mixin row-nested {
+	margin-left: -$Column-gutter;
+	margin-right: -$Column-gutter;
+
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+
+//
+// Show grid
+//
+
+@mixin showGrid($Prefix: $Column-prefix) {
+	[class*="#{$Prefix}"] {
+		background-color: darken(#fff, 1%);
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: $Column-gutter;
+			background-color: darken(#fff, 4%);
+		}
+
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+		}
+	}
+}
+
+@if $show-grid == true {
+	@include showGrid();
+}
+
+
+
+@if $use-component-grid == true {
+
+	// --------------------------------------------------------------------------
+	// Grid Row
+	// --------------------------------------------------------------------------
+
+	.#{$Row-selector} {
+		@include row();
+
+		.#{$Row-selector} {
+			@include row-nested();
+		}
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// Grid Column
+	// --------------------------------------------------------------------------
+
+	.#{$Column-selector} {
+		@include column();
+	}
+
+	@include generateColumns();
+
+}

@@ -1,0 +1,29 @@
+.logo {
+	@include font-size(22px);
+
+	width: $Lead * 3;
+	height: $Lead * 3;
+	line-height: $Lead * 3;
+	text-align: center;
+	margin: ($Lead * 2.5) 0 0;
+
+	border: 4px solid $Colour-primary;
+	border-radius: 100%;
+	color: $Colour-primary;
+
+	@include respond-to(480px) {
+		width: $Lead * 4;
+		height: $Lead * 4;
+		line-height: $Lead * 4;
+
+		margin-top: ($Lead * 3);
+	}
+
+	@include respond-to(520px) {
+		width: $Lead * 5;
+		height: $Lead * 5;
+		line-height: $Lead * 5;
+
+		margin-top: ($Lead * 4);
+	}
+}

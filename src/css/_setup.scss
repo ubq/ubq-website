@@ -1,0 +1,113 @@
+//
+// --------------------------------------------------------------------------
+// Lycra style files
+// --------------------------------------------------------------------------
+//
+
+
+// --------------------------------------------------------------------------
+// Element Setup
+// --------------------------------------------------------------------------
+
+$use-element-container: true !default;
+$use-element-document: true !default;
+$use-element-form: true !default;
+$use-element-media: true !default;
+$use-element-style: true !default;
+$use-element-type: true !default;
+
+
+
+// --------------------------------------------------------------------------
+// Base Setup
+// --------------------------------------------------------------------------
+
+$use-base-display: true !default;
+$use-base-type: true !default;
+
+
+
+// --------------------------------------------------------------------------
+// Component Setup
+// --------------------------------------------------------------------------
+
+$use-component-grid: false !default;
+$show-grid: false !default;
+
+
+
+//
+// --------------------------------------------------------------------------
+// VARIABLES
+// --------------------------------------------------------------------------
+//
+
+
+// --------------------------------------------------------------------------
+// Colour Variables
+// --------------------------------------------------------------------------
+
+$Colour-black: #000;
+$Colour-white: #fff;
+
+
+// Semantic colour naming
+$Colour-base: #444;
+$Colour-primary: #E3AFAF;
+$Colour-secondary: #FFCC5C;
+$Colour-error: #FF7F66;
+$Colour-success: #96CEB4;
+$Colour-alert: #2185C5;
+
+$Colour-border: #ddd;
+
+
+
+// --------------------------------------------------------------------------
+// Type Variables
+// --------------------------------------------------------------------------
+
+$FontFamily-heading: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$FontFamily-copy: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$FontFamily-mono: Consolas, "Andale Mono WT", "Andale Mono", Courier, monospace;
+
+
+$FontSize-b: 15px;
+
+$FontSize-1: 44px;
+$FontSize-2: 24px;
+$FontSize-3: 27px;
+$FontSize-4: 22px;
+$FontSize-5: 14px;
+$FontSize-6: 12px;
+$FontSize-7: 8px;
+
+
+$FontWeight-bold: 500;
+$FontWeight-normal: 300;
+$FontWeight-semi: 400;
+
+
+$FontStyle-italic: italic;
+$FontStyle-noraml: normal;
+
+$Lead: 24px;
+$Lead--large: 28px;
+
+
+
+// --------------------------------------------------------------------------
+// Grid Variables
+// --------------------------------------------------------------------------
+
+$Column-gutter: 12px;
+$Column-count: 3;
+
+$Column-selector: column;
+$Column-prefix: column-;
+$Column-offsetSelector: column-offset-;
+
+$Row-selector: row;
+$Row-width: 100%;
+$Row-maxWidth: 29rem;
+$Row-margin: 0 auto;

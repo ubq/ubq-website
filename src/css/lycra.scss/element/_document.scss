@@ -1,0 +1,36 @@
+@if $use-element-document == true {
+
+	// --------------------------------------------------------------------------
+	// Body 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Body element
+	// Remove default margin.
+	// Set consisitent body background colour
+	//
+
+	body {
+	    margin: 0;
+	    background-color: $Colour-white;
+	}
+
+	
+
+	// --------------------------------------------------------------------------
+	// Html 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Html element
+	// Set default font family to sans-serif.
+	// Prevent iOS text size adjust after orientation change, without disabling user zoom.
+	//
+
+	html {
+		font-family: $FontFamily-copy;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+
+}

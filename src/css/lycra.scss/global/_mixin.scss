@@ -1,0 +1,61 @@
+// --------------------------------------------------------------------------
+// Mixins 
+// --------------------------------------------------------------------------
+// TODO: REFACTOR MEDIA QUERY AS GRIMMMMMM
+
+// --------------------------------------------------------------------------
+// Media Queries
+// --------------------------------------------------------------------------
+
+//
+// Respond to - min (When you get to this width set these styles)
+// Limit to - min and max (Only show these styles within this width range)
+//
+
+@mixin respond-to($Width, $Orientation: false) {
+	@if $Orientation == true {
+		@media only screen and (orientation: $Orientation) and (min-width : $Width) { @content; }
+	} @else {
+		@media only screen and (min-width : $Width) { @content; }
+	}
+}
+
+
+@mixin limit-to($Width-min, $Width-max, $Orientation: false) {
+	@if $Orientation == true {
+		@media only screen and (orientation: $Orientation) and (min-width : $Width)and (max-width: $Width-max) { @content; }
+	} @else {
+		@media only screen and (min-width : $Width-min) and (max-width: $Width-max) { @content; }
+	}
+}
+
+
+@mixin print() {
+	@media only print { @content; }
+}
+
+
+
+// --------------------------------------------------------------------------
+// Media Queries
+// --------------------------------------------------------------------------
+
+//
+// Calculates a REM font size value with a px fallback
+//
+
+@mixin font-size($font-size: $FontSize-b) {
+	font-size: $font-size + 0px;
+	font-size: convert-font-to-relative($font-size) + 0rem;	
+}
+
+
+
+//
+// Calculates a REM font size value with a px fallback
+//
+
+@mixin line-height($font-size: $FontSize-b) {
+	line-height: $font-size + 0px;
+	line-height: convert-font-to-relative($font-size) + 0rem;	
+}

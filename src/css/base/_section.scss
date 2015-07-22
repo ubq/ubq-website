@@ -1,0 +1,17 @@
+.section {
+	// padding-top: $Lead;
+	padding-bottom: $Lead;
+
+	@include respond-to(520px) {
+		// padding-top: $Lead * 1.5;
+		padding-bottom: $Lead * 1.5;
+	}
+
+	+ .section {
+		margin-top: $Lead * 2;
+
+		@include respond-to(520px) {
+			margin-top: $Lead;
+		}
+	}
+}

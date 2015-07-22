@@ -1,0 +1,98 @@
+@if $use-element-media == true {
+
+	// --------------------------------------------------------------------------
+	// Audio 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Audio element
+	// Correct `inline-block` display not defined in IE 8/9.
+	// Prevent modern browsers from displaying `audio` without controls.
+	// Remove excess height in iOS 5 devices.
+	//
+
+	audio {
+		@extend %displayInlineBlock;
+
+		&:not([controls]) {
+		    display: none;
+		    height: 0;
+		}
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// Canvas 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Canvas element
+	// Correct `inline-block` display not defined in IE 8/9.
+	//
+
+	canvas {
+		@extend %displayInlineBlock;
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// Figure 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Figure element
+	// Address margin not present in IE 8/9 and Safari 5.
+	//
+
+	figure {
+		margin: 0;
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// Image 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Image element
+	// Remove border when inside `a` element in IE 8/9.
+	//
+
+	img {
+		border: 0;
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// SVG 
+	// --------------------------------------------------------------------------
+	
+	//
+	// SVG element
+	// Correct overflow displayed oddly in IE 9.
+	//
+
+	svg:not(:root) {
+		overflow: hidden;
+	}
+
+
+
+	// --------------------------------------------------------------------------
+	// Video 
+	// --------------------------------------------------------------------------
+	
+	//
+	// Video element
+	// Correct `inline-block` display not defined in IE 8/9.
+	//
+
+	video {
+		@extend %displayInlineBlock;
+	}
+
+}

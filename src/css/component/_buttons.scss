@@ -1,0 +1,52 @@
+.Button {
+	position: relative;
+	display: block;
+
+	@include font-size($FontSize-6);
+	@include line-height($Lead);
+	font-weight: 500;
+
+	padding: (8px)  ($Lead / 2);
+	
+	text-align: center;
+	color: $Colour-black;
+	border: 2px solid rgba($Colour-black, .5);
+
+	box-sizing: border-box;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		border-width: 0 0 42px 110px;
+		border-color: transparent rgba($Colour-black, .1) rgba($Colour-black, .1) transparent;
+		border-style: solid;
+		z-index: -1;
+		transition: all .2s;
+	}
+
+	&:hover {
+		color: $Colour-primary;
+		border-color: $Colour-primary;
+
+		transition: all .2s;
+
+		&:before {
+			border-color: transparent rgba($Colour-primary, .1) rgba($Colour-primary, .1) transparent;
+		}
+	}
+
+	@include respond-to(480px) {
+		&:before {
+			border-width: 0 0 46px 140px;
+		}
+	}
+
+	@include respond-to(520px) {
+		&:before {
+			border-width: 0 0 48px 140px;
+		}
+	}
+}

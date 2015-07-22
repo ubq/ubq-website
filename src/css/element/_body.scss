@@ -1,0 +1,27 @@
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	padding-bottom: $Lead * 2;
+	@include font-size($FontSize-b);
+	line-height: 1.5;
+	font-weight: 500;
+
+	color: $Colour-base;
+}
+
+html {
+	font-size: $FontSize-b;
+
+	@include respond-to(480px) {
+		font-size: 110%;
+	}
+
+	@include respond-to(520px) {
+		font-size: 120%;
+	}
+}
+
+footer {
+
+}

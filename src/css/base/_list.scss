@@ -1,0 +1,12 @@
+.listSocial {
+	overflow: auto;
+	display: block;
+
+	list-style: none;
+	padding-left: 0;
+	margin-top: $Lead;
+
+	li {
+		line-height: 2;
+	}
+}
