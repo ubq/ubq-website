@@ -296,6 +296,7 @@ module.exports = function(grunt) {
 		'clean:dist',
 		'copy:images',
 		'sass',
+		'autoprefixer',
 		'bake'
 	]);
 
