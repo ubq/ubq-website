@@ -246,8 +246,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
-  color: #FFB800;
-  background-color: #2B1BDC;
+  color: #020885;
+  background-color: #FDE5DF;
 }
 
 html {
@@ -274,8 +274,8 @@ a.link {
   transition: all .3s;
 }
 a.link:hover, a.link:focus {
-  color: #FFB800;
-  border-color: #FFB800;
+  color: #020885;
+  border-color: #020885;
   transition: all .3s;
 }
 
@@ -299,7 +299,7 @@ p {
   line-height: 2;
 }
 .listSocial a {
-  color: #FFB800;
+  color: #020885;
   border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -314,7 +314,7 @@ p {
 .logo {
   font-size: 22px;
   font-size: 1.4666666667rem;
-  color: #FFB800;
+  color: #020885;
 }
 
 .row {
