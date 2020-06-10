@@ -9,4 +9,18 @@
 	li {
 		line-height: 2;
 	}
+
+	a {
+		color: $Colour-primary;
+		border-bottom: 3px solid rgba($Colour-white, .3);
+	}
+}
+
+.centerP {
+	display: flex;
+	width: 100%;
+	align-items: center;
+
+	height: 65vh;
+	margin-bottom: 72px;
 }

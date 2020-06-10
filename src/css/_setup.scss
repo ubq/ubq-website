@@ -53,7 +53,7 @@ $Colour-white: #fff;
 
 // Semantic colour naming
 $Colour-base: #444;
-$Colour-primary: #E3AFAF;
+$Colour-primary: #FFB800;
 $Colour-secondary: #FFCC5C;
 $Colour-error: #FF7F66;
 $Colour-success: #96CEB4;
@@ -66,15 +66,17 @@ $Colour-border: #ddd;
 // --------------------------------------------------------------------------
 // Type Variables
 // --------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker');
 
 $FontFamily-heading: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $FontFamily-copy: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$FontFamily-hand: "Permanent Marker", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $FontFamily-mono: Consolas, "Andale Mono WT", "Andale Mono", Courier, monospace;
 
 
 $FontSize-b: 15px;
 
-$FontSize-1: 44px;
+$FontSize-1: 36px;
 $FontSize-2: 24px;
 $FontSize-3: 27px;
 $FontSize-4: 22px;
@@ -109,5 +111,5 @@ $Column-offsetSelector: column-offset-;
 
 $Row-selector: row;
 $Row-width: 100%;
-$Row-maxWidth: 29rem;
+$Row-maxWidth: 40rem;
 $Row-margin: 0 auto;

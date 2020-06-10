@@ -1,9 +1,9 @@
 @if $use-base-type == true {
 
 	// --------------------------------------------------------------------------
-	// Type 
+	// Type
 	// --------------------------------------------------------------------------
-	
+
 	//
 	// Type Weight Bold
 	//
@@ -44,6 +44,13 @@
 	.typeItalic,
 	%typeItalic {
 		font-style: $FontStyle-italic;
+	}
+
+	.typeLede {
+		@include font-size($FontSize-1);
+		line-height: 1.25;
+		letter-spacing: 2px;
+		font-family: $FontFamily-hand;
 	}
 
 }
